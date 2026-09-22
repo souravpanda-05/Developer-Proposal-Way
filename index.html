@@ -1,0 +1,374 @@
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="A cinematic neon heart particle proposal experience."
+    >
+
+    <title>Our Little Universe ❤️</title>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================================
+         BACKGROUND PARTICLE CANVAS
+    ================================================= -->
+
+    <canvas id="particleCanvas"></canvas>
+
+
+    <!-- ================================================
+         AMBIENT BACKGROUND GLOW
+    ================================================= -->
+
+    <div class="ambient-glow glow-one"></div>
+
+    <div class="ambient-glow glow-two"></div>
+
+
+    <!-- ================================================
+         MAIN PROPOSAL EXPERIENCE
+    ================================================= -->
+
+    <main class="proposal-container">
+
+
+        <!-- ============================================
+             PAGE 1 — INTRO
+        ============================================= -->
+
+        <section
+            class="intro-screen"
+            id="introScreen"
+        >
+
+            <p class="small-text">
+                ✨ Somewhere between a million moments...
+            </p>
+
+
+            <h1>
+
+                I Created A Little Universe
+
+                <span>
+                    For You
+                </span>
+
+            </h1>
+
+
+            <p class="intro-description">
+
+                Stay for a moment...
+
+                something beautiful is about to appear.
+
+            </p>
+
+
+            <button
+                class="start-btn"
+                id="startBtn"
+            >
+
+                <span>
+                    Enter My Universe
+                </span>
+
+                <span class="btn-heart">
+                    ♡
+                </span>
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ============================================
+             PAGE 2 — PARTICLE HEART
+        ============================================= -->
+
+        <section
+            class="heart-screen hidden"
+            id="heartScreen"
+        >
+
+            <!--
+                The heart will NOT be created with CSS.
+
+                JavaScript particles will travel from
+                random positions and form a heart here.
+            -->
+
+            <div
+                class="particle-heart-stage"
+                id="particleHeartStage"
+            ></div>
+
+
+            <div class="heart-message">
+
+                <p class="reveal-text">
+
+                    Out of all the stars in this universe...
+
+                </p>
+
+
+                <h2>
+
+                    I would still choose
+
+                    <span>
+                        You.
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <button
+                class="continue-btn"
+                id="continueBtn"
+            >
+
+                There's something I want to ask you...
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ============================================
+             PAGE 3 — PROPOSAL
+        ============================================= -->
+
+        <section
+            class="proposal-screen hidden"
+            id="proposalScreen"
+        >
+
+            <div class="proposal-content">
+
+
+                <p class="proposal-label">
+
+                    💫 One Question
+
+                </p>
+
+
+                <h2>
+
+                    Will You Be
+
+                    <span>
+                        Mine?
+                    </span>
+
+                </h2>
+
+
+                <p class="proposal-subtitle">
+
+                    Not just for a moment,
+
+                    but for all the beautiful moments
+
+                    waiting ahead of us.
+
+                </p>
+
+
+                <div class="proposal-buttons">
+
+
+                    <button
+                        class="yes-btn"
+                        id="yesBtn"
+                    >
+
+                        YES ❤️
+
+                    </button>
+
+
+                    <button
+                        class="no-btn"
+                        id="noBtn"
+                    >
+
+                        NO
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================================
+             PAGE 4 — FINAL
+        ============================================= -->
+
+        <section
+            class="final-screen hidden"
+            id="finalScreen"
+        >
+
+            <div class="final-content">
+
+
+                <div class="final-heart">
+
+                    ♥
+
+                </div>
+
+
+                <p class="final-small">
+
+                    Then it's official...
+
+                </p>
+
+
+                <h2>
+
+                    I LOVE YOU
+
+                    <span>
+                        SOUMYA
+                    </span>
+
+                </h2>
+
+
+                <p class="final-message">
+
+                    Two souls.<br>
+
+                    One beautiful journey.<br>
+
+                    And countless moments still waiting
+                    to be written.
+
+                </p>
+
+
+                <div class="final-signature">
+
+                    Forever starts here ✨
+
+                </div>
+
+                <button class="replay-btn" id="replayBtn">
+                   ↻ Experience Again
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================================================
+         BACKGROUND MUSIC
+    ================================================= -->
+
+    <audio
+        id="proposalMusic"
+        loop
+        preload="auto"
+    >
+
+        <source
+            src="assets/music/proposal.mp3"
+            type="audio/mpeg"
+        >
+
+    </audio>
+
+
+
+    <!-- ================================================
+         MUSIC CONTROL
+    ================================================= -->
+
+    <button
+        class="music-btn"
+        id="musicBtn"
+        aria-label="Toggle music"
+    >
+
+        ♫
+
+    </button>
+
+
+
+    <!-- ================================================
+         JAVASCRIPT
+    ================================================= -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
+
